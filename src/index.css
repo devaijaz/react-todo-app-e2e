@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.5px;
+  }
+  body {
+    @apply bg-slate-400 text-slate-900 dark:bg-slate-800 dark:text-slate-50;
+  }
+}
+
+@layer components {
+  .listitem {
+    @apply px-2 py-2 border-[1px] transition-all;
+  }
+  .form-input {
+    @apply mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+    focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+    disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+    invalid:border-pink-500 invalid:text-pink-600
+    focus:invalid:border-pink-500 focus:invalid:ring-pink-500 dark:bg-slate-900;
+  }
+  .card {
+    @apply overflow-hidden bg-slate-100 dark:bg-slate-900 shadow-sm rounded-t-md shadow-slate-500 dark:shadow-slate-200;
+  }
+}
+
+:root {
+  --bgcolor: #ddd;
+  --color: #222;
+  --darkmode-bgcolor: #444;
+  --darkmode-textcolor: #eee;
+
+  --bglight: #eee;
+  --bgdark: #222;
+  --fs: 100%;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+/*
+body {
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  font-size: var(--fs);
+  font-family: "Roboto", sans-serif;
+}
+.darkmode body {
+  background-color: var(--darkmode-bgcolor);
+  color: var(--darkmode-textcolor);
+}
+*/
+/*
+.card {
+  background-color: var(--bglight);
+  color: inherit;
+  padding: 0.5rem;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
+}
+.darkmode .card {
+  background-color: var(--bgdark);
+  color: inherit;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.3);
+}
+*/
+.todoapp-container {
+  width: 816px;
+  margin: 0 auto;
+}
+input {
+  background-color: var(--bglight);
+}
+.darkmode input {
+  background-color: var(--bgdark);
+}
+
+button {
+  padding: 0.5rem 0.5rem;
+}
